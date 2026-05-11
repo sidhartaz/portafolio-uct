@@ -1,0 +1,151 @@
+/* ============================================================
+   PORTAFOLIO — responsive.css
+   Media queries y adaptaciones para distintos tamaños de pantalla
+   ============================================================ */
+
+/* ============================================================
+   TABLETS Y PANTALLAS MEDIANAS (< 991px)
+   ============================================================ */
+@media (max-width: 991px) {
+  .hero-avatar-col { padding: 20px 0 40px; }
+  .avatar-wrapper  { width: 240px; height: 240px; }
+  .hero-stats      { gap: 20px; }
+  .timeline        { padding-left: 30px; }
+  .timeline::before{ left: 10px; }
+  .timeline-dot    { left: -30px; width: 24px; height: 24px; font-size: 0.65rem; }
+}
+
+/* ============================================================
+   MÓVILES (< 767px)
+   ============================================================ */
+@media (max-width: 767px) {
+  :root { --section-padding: 70px 0; }
+
+  .hero-name      { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+  .hero-stats     { gap: 16px; }
+  .stat-number    { font-size: 1.5rem; }
+  .hero-actions   { flex-direction: column; }
+
+  .btn-primary-custom,
+  .btn-ghost-custom {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact-form   { padding: 24px 20px; }
+  .section-header { flex-wrap: wrap; }
+  .section-line   { display: none; }
+
+  /* Navbar */
+  #navbarNav {
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  .nav-link {
+    padding: 10px 8px !important;
+  }
+
+  /* Footer */
+  .footer-inner {
+    gap: 20px;
+  }
+
+  /* Timeline */
+  .timeline-content {
+    padding: 18px 20px;
+  }
+
+  /* Project filters */
+  .project-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 0.72rem;
+  }
+}
+
+/* ============================================================
+   MÓVILES PEQUEÑOS (< 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-stats     { flex-direction: column; gap: 16px; }
+  .stat-divider   { width: 40px; height: 1px; }
+  .avatar-wrapper { width: 200px; height: 200px; }
+
+  .contact-form   { padding: 20px 16px; }
+
+  /* Botón tema */
+  .theme-toggle   { top: 70px; right: 12px; }
+
+  /* Hero actions */
+  .btn-primary-custom,
+  .btn-ghost-custom {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+/* ============================================================
+   PANTALLAS GRANDES (> 1400px)
+   ============================================================ */
+@media (min-width: 1400px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* ============================================================
+   PREFERENCIA: REDUCCIÓN DE MOVIMIENTO
+   Accesibilidad para usuarios sensibles al movimiento
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .avatar-frame-outer,
+  .avatar-orbit,
+  .label-dot,
+  .loader-cursor,
+  .scroll-line {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   MODO IMPRESIÓN
+   ============================================================ */
+@media print {
+  .navbar,
+  .theme-toggle,
+  .back-to-top,
+  #loader,
+  #particleCanvas,
+  .hero-grain,
+  .scroll-indicator {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 40px 0;
+  }
+}
