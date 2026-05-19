@@ -1,4 +1,4 @@
-# 🚀 Portafolio — Alejandro Reyes
+# 🚀 Portafolio — Carlos Sepúlveda
 
 Portafolio personal desarrollado con HTML5, CSS3, JavaScript y Bootstrap 5.
 

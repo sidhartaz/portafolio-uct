@@ -7,7 +7,7 @@
   ================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio profesional de Alejandro Reyes, estudiante de Informática." />
+  <meta name="description" content="Portafolio profesional de Carlos Sepúlveda, estudiante de Informática." />
   <title>Carlos Sepúlveda | Desarrollador</title>
 
   <!-- ================================================
@@ -60,134 +60,119 @@
   <!-- ================================================
        NAVBAR
   ================================================ -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Navegación principal">
-    <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Navegación principal">
+  <div class="container">
 
-      <a class="navbar-brand" href="#inicio">
-        <span class="brand-bracket">&lt;</span>
-        AR
-        <span class="brand-bracket">/&gt;</span>
+    <!-- Logo / Nombre -->
+    <a class="navbar-brand" href="#inicio">
+      <span class="brand-bracket">&lt;</span>
+      CS
+      <span class="brand-bracket">/&gt;</span>
+    </a>
+
+    <!-- Botón hamburguesa móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Abrir menú">
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+
+    <!-- Links de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Biografía</a></li>
+        <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+      </ul>
+
+      <!-- Botón Login alineado a la derecha -->
+      <a href="#" class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="bi bi-person-lock"></i> Iniciar Sesión
       </a>
+    </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Abrir menú">
-        <span class="toggler-icon"></span>
-        <span class="toggler-icon"></span>
-        <span class="toggler-icon"></span>
-      </button>
+  </div>
+</nav>
+<!-- ================================================
+     SECCIÓN 1: HERO
+================================================ -->
+<section id="inicio" class="hero-section">
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
-        </ul>
+  <div class="container hero-content">
+    <div class="row align-items-center min-vh-100">
+
+      <!-- Columna texto -->
+      <div class="col-lg-7 hero-text" data-animate="fade-up">
+        <p class="hero-label">
+          <span class="label-dot"></span> Disponible para proyectos
+        </p>
+
+        <h1 class="hero-name">
+          Carlos<br />
+          <span class="hero-name-accent">Sepúlveda.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Soy <span id="typingText" class="typing-text"></span><span class="typing-cursor">|</span>
+        </p>
+
+        <p class="hero-description">
+          Estudiante de Informática apasionado por construir
+          soluciones tecnológicas elegantes. Me enfoco en el desarrollo web,
+          la automatización y el software de código abierto.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn-primary-custom">
+            Ver Proyectos <i class="bi bi-arrow-right-short"></i>
+          </a>
+          <a href="#contacto" class="btn-ghost-custom">
+            Contáctame
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="12">0</span>
+            <span class="stat-label">Proyectos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Tecnologías</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Años exp.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna avatar -->
+      <div class="col-lg-5 hero-avatar-col" data-animate="fade-left">
+        <div class="avatar-wrapper">
+          <div class="avatar-img-wrapper">
+            <img src="assets/img/226392851.jpeg" alt="Carlos Sepúlveda">
+          </div>
+          <div class="avatar-badge">
+            <i class="bi bi-code-slash"></i> Full Stack Dev
+          </div>
+        </div>
       </div>
 
     </div>
-  </nav>
+  </div>
 
-  <!-- ================================================
-       SECCIÓN 1: HERO
-  ================================================ -->
-  <section id="inicio" class="hero-section">
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
 
-    <canvas id="particleCanvas" aria-hidden="true"></canvas>
-    <div class="hero-grain" aria-hidden="true"></div>
-
-    <div class="container hero-content">
-      <div class="row align-items-center min-vh-100">
-
-        <div class="col-lg-7 hero-text" data-animate="fade-up">
-          <p class="hero-label">
-            <span class="label-dot"></span> Disponible para proyectos
-          </p>
-
-          <h1 class="hero-name">
-            Carlos<br />
-            <span class="hero-name-accent">Sepúlveda.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            Soy <span id="typingText" class="typing-text"></span><span class="typing-cursor">|</span>
-          </p>
-
-          <p class="hero-description">
-            Estudiante de Ingeniería Informática apasionado por construir
-            soluciones tecnológicas elegantes. Me enfoco en el desarrollo web,
-            la automatización y el software de código abierto.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#proyectos" class="btn-primary-custom">
-              Ver Proyectos <i class="bi bi-arrow-right-short"></i>
-            </a>
-            <a href="#contact" class="btn-ghost-custom">
-              Contáctame
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number" data-target="12">0</span>
-              <span class="stat-label">Proyectos</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="6">0</span>
-              <span class="stat-label">Tecnologías</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="3">0</span>
-              <span class="stat-label">Años exp.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5 hero-avatar-col" data-animate="fade-left">
-          <div class="avatar-wrapper">
-            <div class="avatar-frame-outer"></div>
-            <div class="avatar-img-wrapper">
-              <!-- Reemplazar con <img src="assets/img/profile/foto.jpg" alt="Alejandro Reyes"> -->
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
-                <defs>
-                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#0ff7c8;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#00c4ff;stop-opacity:1" />
-                  </linearGradient>
-                </defs>
-                <circle cx="100" cy="80" r="42" fill="url(#avatarGrad)" opacity="0.9"/>
-                <circle cx="100" cy="70" r="28" fill="#0d1117"/>
-                <circle cx="100" cy="72" r="22" fill="url(#avatarGrad)" opacity="0.3"/>
-                <circle cx="90" cy="68" r="4" fill="#0ff7c8"/>
-                <circle cx="110" cy="68" r="4" fill="#0ff7c8"/>
-                <path d="M60 140 Q100 120 140 140 L150 200 L50 200 Z" fill="url(#avatarGrad)" opacity="0.7"/>
-                <rect x="88" y="78" width="24" height="2" fill="#0d1117" rx="1"/>
-                <rect x="85" y="84" width="30" height="2" fill="#0d1117" rx="1"/>
-              </svg>
-            </div>
-            <div class="avatar-badge">
-              <i class="bi bi-code-slash"></i> Full Stack Dev
-            </div>
-            <div class="avatar-orbit" aria-hidden="true"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span>scroll</span>
-    </div>
-
-  </section>
+</section>
 
   <!-- ================================================
        SECCIÓN 2: SOBRE MÍ
@@ -197,7 +182,7 @@
 
       <div class="section-header" data-animate="fade-up">
         <span class="section-number">01</span>
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title">Biografía</h2>
         <div class="section-line"></div>
       </div>
 
@@ -207,8 +192,7 @@
           <div class="about-bio-card">
             <div class="bio-tag">// bio.txt</div>
             <p class="bio-text">
-              Hola, soy <strong>Alejandro Reyes</strong>, estudiante de tercer año de 
-              Ingeniería en Informática en la Universidad de La Frontera (Temuco, Chile).
+              Hola, soy Carlos Sepúlveda.
             </p>
             <p class="bio-text">
               Me apasiona el desarrollo de software moderno, la arquitectura de sistemas
@@ -217,7 +201,7 @@
             </p>
             <p class="bio-text">
               Mi objetivo es crear herramientas digitales que tengan impacto real
-              en las personas, combinando buenas prácticas de ingeniería con un
+              en las personas, combinando buenas prácticas con un
               diseño centrado en el usuario.
             </p>
             <div class="terminal-snippet">
@@ -227,12 +211,12 @@
                 <span class="t-dot green"></span>
                 <span class="t-title">about.js</span>
               </div>
-              <pre class="terminal-code"><code><span class="c-keyword">const</span> <span class="c-var">alejandro</span> = {
+              <pre class="terminal-code"><code><span class="c-keyword">const</span> <span class="c-var">Carlos</span> = {
   <span class="c-prop">edad</span>: <span class="c-num">22</span>,
   <span class="c-prop">ciudad</span>: <span class="c-str">"Temuco, Chile"</span>,
-  <span class="c-prop">universidad</span>: <span class="c-str">"UFRO"</span>,
+  <span class="c-prop">universidad</span>: <span class="c-str">"UCT"</span>,
   <span class="c-prop">idiomas</span>: [<span class="c-str">"Español"</span>, <span class="c-str">"Inglés B2"</span>],
-  <span class="c-prop">hobbies</span>: [<span class="c-str">"OSS"</span>, <span class="c-str">"Trekking"</span>, <span class="c-str">"Fotografía"</span>],
+  <span class="c-prop">hobbies</span>: [<span class="c-str">"OSS"</span>, <span class="c-str">"Trekking"</span>, <span class="c-str">"Anime"</span>],
   <span class="c-prop">disponible</span>: <span class="c-bool">true</span>
 };</code></pre>
             </div>
@@ -366,6 +350,149 @@
       </div>
     </div>
   </section>
+
+  <!-- ================================================
+     SECCIÓN: TECNOLOGÍAS DOMINADAS
+================================================ -->
+<section id="tecnologias" class="section-padding">
+  <div class="container">
+
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Tecnologías Dominadas</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-4 mt-4">
+
+      <!-- Frontend -->
+      <div class="col-lg-6" data-animate="fade-right">
+        <h4 class="skills-subtitle">Frontend</h4>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-filetype-html"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-level nivel-avanzado">Avanzado</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-filetype-css"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-level nivel-avanzado">Avanzado</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-filetype-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-level nivel-intermedio">Intermedio</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-bootstrap"></i>
+              <span>Bootstrap 5</span>
+            </div>
+            <div class="tech-level nivel-avanzado">Avanzado</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="88"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Backend -->
+      <div class="col-lg-6" data-animate="fade-left">
+        <h4 class="skills-subtitle">Backend & Base de Datos</h4>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-filetype-php"></i>
+              <span>PHP</span>
+            </div>
+            <div class="tech-level nivel-intermedio">Intermedio</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="70"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-level nivel-intermedio">Intermedio</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="68"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-filetype-py"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-level nivel-intermedio">Intermedio</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-header">
+            <div class="tech-info">
+              <i class="bi bi-git"></i>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="tech-level nivel-avanzado">Avanzado</div>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="82"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Niveles de dominio (leyenda) -->
+      <div class="col-12 mt-2" data-animate="fade-up">
+        <div class="tech-legend">
+          <span><span class="legend-dot nivel-basico-dot"></span> Básico</span>
+          <span><span class="legend-dot nivel-intermedio-dot"></span> Intermedio</span>
+          <span><span class="legend-dot nivel-avanzado-dot"></span> Avanzado</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ================================================
        SECCIÓN 4: PROYECTOS
@@ -519,78 +646,7 @@
     </div>
   </section>
 
-  <!-- ================================================
-       SECCIÓN 5: EXPERIENCIA
-  ================================================ -->
-  <section id="experiencia" class="section-padding section-alt">
-    <div class="container">
 
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-number">04</span>
-        <h2 class="section-title">Experiencia</h2>
-        <div class="section-line"></div>
-      </div>
-
-      <div class="timeline mt-5">
-
-        <div class="timeline-item" data-animate="fade-right">
-          <div class="timeline-dot"><i class="bi bi-mortarboard"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2022 — Presente</div>
-            <h5>Ingeniería en Informática</h5>
-            <h6>Universidad de La Frontera · Temuco</h6>
-            <p>Carrera de 5 años enfocada en programación, redes, bases de datos e ingeniería de software. Promedio académico: 6.1 / 7.0.</p>
-            <div class="timeline-tags"><span>Algoritmos</span><span>Redes</span><span>BD</span><span>SO</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-right">
-          <div class="timeline-dot"><i class="bi bi-building"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Verano 2024</div>
-            <h5>Practicante de Desarrollo Web</h5>
-            <h6>StartupLocal S.A. · Temuco</h6>
-            <p>Desarrollo de módulo de reportes para sistema ERP interno usando PHP, Bootstrap y MySQL. Implementé sistema de exportación PDF/Excel.</p>
-            <div class="timeline-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-right">
-          <div class="timeline-dot"><i class="bi bi-award"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2023</div>
-            <h5>Hackathon UFRO — 2° Lugar</h5>
-            <h6>Universidad de La Frontera</h6>
-            <p>Desarrollo de aplicación web para conectar voluntarios con organizaciones sociales de la región de La Araucanía en 48 horas.</p>
-            <div class="timeline-tags"><span>React</span><span>Node.js</span><span>Hackathon</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-right">
-          <div class="timeline-dot"><i class="bi bi-patch-check"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2023</div>
-            <h5>Certificación — Python for Everybody</h5>
-            <h6>Coursera / University of Michigan</h6>
-            <p>Completé especialización de 5 cursos: estructuras de datos, acceso a bases de datos y Python para web.</p>
-            <div class="timeline-tags"><span>Python</span><span>SQL</span><span>API REST</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-right">
-          <div class="timeline-dot"><i class="bi bi-laptop"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2022 — 2024</div>
-            <h5>Monitor Académico — Programación I y II</h5>
-            <h6>Universidad de La Frontera</h6>
-            <p>Apoyo pedagógico a estudiantes de primer año en algoritmia y programación en C/Python. +60 estudiantes asistidos.</p>
-            <div class="timeline-tags"><span>C</span><span>Python</span><span>Docencia</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ================================================
        SECCIÓN 6: CONTACTO
@@ -610,7 +666,7 @@
           <h3 class="contact-headline">¿Tienes un proyecto en mente?</h3>
           <p class="contact-subtext">Estoy disponible para prácticas, proyectos freelance y colaboraciones open source. No dudes en escribirme, ¡respondo en menos de 24 horas!</p>
           <ul class="contact-info-list">
-            <li><i class="bi bi-envelope-at-fill"></i><a href="mailto:alejandro@example.com">alejandro@example.com</a></li>
+            <li><i class="bi bi-envelope-at-fill"></i><a href="mailto:csepulveda2025@alu.uct.cl">csepulveda2025@alu.uct.cl</a></li>
             <li><i class="bi bi-telephone-fill"></i><a href="tel:+56912345678">+56 9 1234 5678</a></li>
             <li><i class="bi bi-geo-alt-fill"></i>Temuco, Araucanía, Chile</li>
           </ul>
@@ -679,7 +735,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="brand-bracket">&lt;</span>AR<span class="brand-bracket">/&gt;</span>
+          <span class="brand-bracket">&lt;</span>CS<span class="brand-bracket">/&gt;</span>
         </div>
         <div class="footer-socials">
           <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -688,7 +744,7 @@
           <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
         </div>
         <p class="footer-copy">
-          © <span id="currentYear"></span> Alejandro Reyes.
+          © <span id="currentYear"></span> Carlos Sepúlveda.
           Hecho con <i class="bi bi-heart-fill" style="color:#e25555"></i> en Temuco, Chile.
         </p>
       </div>
@@ -699,13 +755,90 @@
   </footer>
 
   <!-- ================================================
+     MODAL DE LOGIN
+================================================ -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content login-modal">
+
+<!-- Header -->
+<div class="modal-header border-0">
+  <h5 class="modal-title" id="loginModalLabel">
+    <span class="brand-bracket">&lt;</span>
+    Acceso Administrativo
+    <span class="brand-bracket">/&gt;</span>
+  </h5>
+  
+  <!-- ms-auto empuja el botón al final del contenedor flex -->
+  <button type="button" class="btn-close-modal ms-auto" data-bs-dismiss="modal" aria-label="Cerrar">
+    <i class="bi bi-x-lg"></i>
+  </button>
+</div>
+
+      <!-- Body -->
+      <div class="modal-body px-4 pb-4">
+
+        <!-- Ícono -->
+        <div class="login-icon">
+          <i class="bi bi-person-lock"></i>
+        </div>
+
+        <form id="loginForm" novalidate>
+
+          <!-- Usuario -->
+          <div class="form-group-custom mb-3">
+            <label for="loginUser" class="form-label-custom">Usuario</label>
+            <div class="input-icon-wrapper">
+              <i class="bi bi-person"></i>
+              <input type="text" id="loginUser" class="form-input-custom ps-5"
+                placeholder="Tu usuario" required />
+            </div>
+            <div class="form-error" id="loginUserError"></div>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="form-group-custom mb-4">
+            <label for="loginPass" class="form-label-custom">Contraseña</label>
+            <div class="input-icon-wrapper">
+              <i class="bi bi-lock"></i>
+              <input type="password" id="loginPass" class="form-input-custom ps-5"
+                placeholder="Tu contraseña" required />
+              <!-- Toggle ver contraseña -->
+              <button type="button" class="toggle-pass" id="togglePass" aria-label="Ver contraseña">
+                <i class="bi bi-eye" id="togglePassIcon"></i>
+              </button>
+            </div>
+            <div class="form-error" id="loginPassError"></div>
+          </div>
+
+          <!-- Botón submit -->
+          <button type="submit" class="btn-submit w-100">
+            <i class="bi bi-box-arrow-in-right me-2"></i> Ingresar
+          </button>
+
+        </form>
+
+        <!-- Error general -->
+        <div id="loginError" class="login-error-msg d-none">
+          <i class="bi bi-exclamation-circle-fill"></i>
+          Usuario o contraseña incorrectos.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ================================================
        SCRIPTS
   ================================================ -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/form-validation.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

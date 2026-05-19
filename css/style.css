@@ -534,25 +534,14 @@ a:hover { color: var(--accent-2); }
 }
 
 /* Avatar */
-.hero-avatar-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-}
-
 .avatar-wrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 220px;
 }
 
-.avatar-frame-outer {
-  position: absolute;
-  inset: -16px;
-  border-radius: 50%;
-  border: 2px dashed rgba(15,247,200,0.3);
-  animation: rotate-slow 20s linear infinite;
+.avatar-frame-outer,
+.avatar-orbit {
+  display: none;
 }
 
 .avatar-img-wrapper {
@@ -560,53 +549,14 @@ a:hover { color: var(--accent-2); }
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  background: var(--bg-card);
-  border: 3px solid rgba(15,247,200,0.4);
-  box-shadow: 0 0 40px rgba(15,247,200,0.15), var(--shadow-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 3px solid var(--border-color);
 }
 
-.avatar-svg {
-  width: 85%;
-  height: 85%;
-}
-
-.avatar-badge {
-  position: absolute;
-  bottom: 10px;
-  right: -10px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  color: var(--accent-1);
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  padding: 6px 14px;
-  border-radius: 20px;
-  white-space: nowrap;
-  box-shadow: var(--shadow-sm);
-}
-
-.avatar-orbit {
-  position: absolute;
-  inset: -30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0,196,255,0.15);
-  animation: rotate-slow 30s linear infinite reverse;
-}
-
-.avatar-orbit::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background: var(--accent-2);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-2);
+.avatar-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 @keyframes rotate-slow {
@@ -1567,3 +1517,154 @@ a:hover { color: var(--accent-2); }
   .stat-divider { width: 40px; height: 1px; }
   .avatar-wrapper { width: 200px; height: 200px; }
 }
+/* ── Modal Login ── */
+.login-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.login-modal .modal-header {
+  padding: 24px 24px 0;
+}
+
+.login-modal .modal-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.btn-close-modal {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.btn-close-modal:hover { color: var(--accent-1); }
+
+.login-icon {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--accent-1);
+  margin: 16px 0 28px;
+}
+
+/* Wrapper input con ícono */
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon-wrapper > i:first-child {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.toggle-pass:hover { color: var(--accent-1); }
+
+.login-error-msg {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: var(--radius-sm);
+  color: #ef4444;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Sección Tecnologías Dominadas ── */
+.tech-item {
+  margin-bottom: 22px;
+}
+
+.tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tech-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.tech-info i { color: var(--accent-1); }
+
+/* Badges de nivel */
+.tech-level {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.nivel-basico {
+  background: rgba(245,158,11,0.1);
+  color: var(--accent-4);
+  border: 1px solid rgba(245,158,11,0.25);
+}
+
+.nivel-intermedio {
+  background: rgba(0,196,255,0.1);
+  color: var(--accent-2);
+  border: 1px solid rgba(0,196,255,0.25);
+}
+
+.nivel-avanzado {
+  background: rgba(15,247,200,0.1);
+  color: var(--accent-1);
+  border: 1px solid rgba(15,247,200,0.25);
+}
+
+/* Leyenda */
+.tech-legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.nivel-basico-dot     { background: var(--accent-4); }
+.nivel-intermedio-dot { background: var(--accent-2); }
+.nivel-avanzado-dot   { background: var(--accent-1); }
