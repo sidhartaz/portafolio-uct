@@ -175,14 +175,7 @@ Copia la carpeta a `htdocs/` y abre `http://localhost/portafolio-uct/`
 - Validación tanto en cliente (JS) como en servidor (PHP)
 - Errores de PHP ocultos en producción (solo log)
 
-## Despliegue en teclab
 
-1. Subir los archivos vía FTP/SFTP a `public_html/`.
-2. Crear la base de datos desde el panel de teclab.
-3. Importar `sql/bd.sql`.
-4. Editar `config/db.php` con las credenciales de teclab.
-5. Verificar permisos: archivos `644`, carpetas `755`.
-6. Probar la URL `https://teclab.uct.cl/~tuusuario/`.
 
 ## Uso de Inteligencia Artificial
 
