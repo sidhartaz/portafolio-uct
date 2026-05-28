@@ -10,8 +10,6 @@
 
 'use strict';
 
-const $ = (selector, parent = document) => parent.querySelector(selector);
-
 (function initContactForm() {
   const form         = $('#contactForm');
   if (!form) return;
@@ -108,19 +106,16 @@ const $ = (selector, parent = document) => parent.querySelector(selector);
     setSubmitState('loading');
 
     try {
-      // TODO: Reemplazar simulateSend() con fetch() real a tu API/servicio
-      // Ejemplo con Formspree:
-      // await fetch('https://formspree.io/f/YOUR_ID', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     name: nameInput.value,
-      //     email: emailInput.value,
-      //     message: messageInput.value
-      //   })
-      // });
+      const data = new FormData(form);
+      const res  = await fetch(form.action, {
+        method:  'POST',
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+        body:    data,
+      });
 
-      await simulateSend();
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Error desconocido');
 
       setSubmitState('success');
       form.reset();
@@ -135,18 +130,6 @@ const $ = (selector, parent = document) => parent.querySelector(selector);
       setSubmitState('error');
     }
   });
-
-  /**
-   * Simula una solicitud de red.
-   * REEMPLAZAR con fetch() real en producción.
-   */
-  function simulateSend() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        Math.random() > 0.1 ? resolve() : reject(new Error('Simulated error'));
-      }, 1500);
-    });
-  }
 
   /**
    * Cambia el estado visual del botón de enviar.

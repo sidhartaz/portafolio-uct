@@ -10,9 +10,6 @@
 
 'use strict';
 
-const $ = (selector, parent = document) => parent.querySelector(selector);
-const $$ = (selector, parent = document) => parent.querySelectorAll(selector);
-
 (function initNavbar() {
   const nav      = $('#mainNav');
   const navLinks = $$('.nav-link');

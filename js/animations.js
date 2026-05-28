@@ -13,9 +13,6 @@
 
 'use strict';
 
-const $ = (selector, parent = document) => parent.querySelector(selector);
-const $$ = (selector, parent = document) => parent.querySelectorAll(selector);
-
 
 /* ============================================================
    1. LOADER INICIAL

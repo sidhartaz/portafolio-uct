@@ -536,7 +536,10 @@ a:hover { color: var(--accent-2); }
 /* Avatar */
 .avatar-wrapper {
   width: 220px;
-  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
 .avatar-frame-outer,
@@ -545,11 +548,12 @@ a:hover { color: var(--accent-2); }
 }
 
 .avatar-img-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .avatar-img-wrapper img {
@@ -557,6 +561,22 @@ a:hover { color: var(--accent-2); }
   height: 100%;
   object-fit: cover;
   object-position: center top;
+}
+
+.avatar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-1);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  color: var(--accent-1);
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 14px rgba(15, 247, 200, 0.12);
+  white-space: nowrap;
 }
 
 @keyframes rotate-slow {
@@ -1491,7 +1511,8 @@ a:hover { color: var(--accent-2); }
    ============================================================ */
 @media (max-width: 991px) {
   .hero-avatar-col { padding: 20px 0 40px; }
-  .avatar-wrapper  { width: 240px; height: 240px; }
+  .avatar-wrapper  { width: 240px; }
+  .avatar-img-wrapper { width: 240px; height: 240px; }
   .hero-stats      { gap: 20px; }
   .timeline        { padding-left: 30px; }
   .timeline::before{ left: 10px; }
@@ -1515,7 +1536,8 @@ a:hover { color: var(--accent-2); }
 @media (max-width: 480px) {
   .hero-stats { flex-direction: column; gap: 16px; }
   .stat-divider { width: 40px; height: 1px; }
-  .avatar-wrapper { width: 200px; height: 200px; }
+  .avatar-wrapper { width: 200px; }
+  .avatar-img-wrapper { width: 200px; height: 200px; }
 }
 /* ── Modal Login ── */
 .login-modal {
@@ -1596,6 +1618,30 @@ a:hover { color: var(--accent-2); }
   gap: 8px;
 }
 
+/* ── Botón Login navbar ── */
+.btn-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--accent-1) !important;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid var(--accent-1);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  background: var(--accent-1);
+  color: #0d1117 !important;
+}
+
 /* ── Sección Tecnologías Dominadas ── */
 .tech-item {
   margin-bottom: 22px;
@@ -1668,3 +1714,41 @@ a:hover { color: var(--accent-2); }
 .nivel-basico-dot     { background: var(--accent-4); }
 .nivel-intermedio-dot { background: var(--accent-2); }
 .nivel-avanzado-dot   { background: var(--accent-1); }
+
+
+/* ============================================================
+   TERMINAL: siempre oscura, ignora modo claro
+   ============================================================ */
+.terminal-code,
+[data-theme="light"] .terminal-code {
+  background: #0d1117 !important;
+  color: #e6edf3 !important;
+}
+
+[data-theme="light"] .terminal-code .c-keyword { color: #ff7b72 !important; }
+[data-theme="light"] .terminal-code .c-var     { color: #79c0ff !important; }
+[data-theme="light"] .terminal-code .c-prop    { color: #d2a8ff !important; }
+[data-theme="light"] .terminal-code .c-str     { color: #a5d6ff !important; }
+[data-theme="light"] .terminal-code .c-num     { color: #79c0ff !important; }
+[data-theme="light"] .terminal-code .c-bool    { color: #ffa657 !important; }
+
+.terminal-code {
+  position: relative;
+  padding-top: 36px !important;
+  border-radius: 8px;
+}
+
+.terminal-code::before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 14px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+
+}
+
+.tool-card .devicon-debian-plain {
+  font-size: 3rem;
+  color: #A81D33;
+}
+
