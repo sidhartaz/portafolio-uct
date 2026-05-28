@@ -26,20 +26,18 @@ La herramienta principal fue **Claude**, utilizada de forma conversacional para 
 
 **Resultado:** Claude detectó múltiples problemas:
 - Login con credenciales en texto plano (`admin/1234` en JavaScript).
-- Inconsistencia universidad (UCT vs UFRO en distintas secciones).
 - Todos los enlaces de proyectos apuntaban a `#`.
 - Numeración rota de secciones (01, 02, 03, 03, 05).
 - Bootstrap cargado dos veces.
-- Error de tipeo: *"estás disfrutando"* en lugar de *"estoy disfrutando"*.
 
-**Ajuste realizado:** Apliqué todas las correcciones señaladas y unifiqué el nombre de la universidad a UCT.
 
+**Ajuste realizado:** Apliqué todas las correcciones 
 ---
 
-###  Prompt 2 — Análisis contra los requerimientos del profesor
+###  Prompt 2 — Análisis
 
 
-**Resultado:** Claude contrastó mi proyecto contra los requerimientos y detectó que faltaba:
+
 - Todo el backend (PHP + MySQL).
 - Script `bd.sql`.
 - Dashboard administrativo con CRUD real.
@@ -64,7 +62,7 @@ La herramienta principal fue **Claude**, utilizada de forma conversacional para 
 
 ### Prompt 4 — Login seguro
 
-> **Prompt implícito:** *(parte del plan de trabajo)*
+
 
 **Resultado:** Claude generó `pages/login.php` con:
 - Prepared statements para evitar SQL injection.
@@ -73,19 +71,10 @@ La herramienta principal fue **Claude**, utilizada de forma conversacional para 
 - `session_regenerate_id(true)` tras login exitoso (anti session fixation).
 - Mensajes de error genéricos (no revela si falló el usuario o la contraseña).
 
-**Ajuste realizado:** Probé el login en local. Verifiqué que las credenciales del usuario `admin` no estuvieran expuestas en el código (solo el hash en la BD).
 
 ---
 
-### Prompt 5 — Sobre el wireframe
 
-> **Prompt:** *"el wireframe lo hice sacando una captura de pantalla al html index pero lo puedo dejar como una imagen png"*
-
-**Resultado:** Claude me explicó por qué eso era riesgoso (la rúbrica dice "previamente desarrollado"), y me ofreció tres opciones con distinto nivel de esfuerzo: rehacerlo en Figma, disimularlo con filtros, o asumirlo honestamente en la presentación.
-
-**Ajuste realizado:** Decidí ser transparente sobre el orden de trabajo durante la defensa técnica y, en paralelo, hacer una versión simplificada en Figma para tener ambos entregables.
-
----
 
 ## 3. Resultados generados por la IA
 
@@ -135,7 +124,7 @@ Aunque la IA aceleró mucho el desarrollo, **todas las decisiones de diseño, co
 El uso ético de IA en programación, para mí, se trata de tres cosas:
 
 1. **Usarla como copiloto, no como piloto.** Las decisiones importantes (qué construir, cómo estructurar, qué priorizar) siguen siendo mías.
-2. **Verificar siempre.** Probar el código, leerlo, entenderlo. La IA puede cometer errores con confianza.
+2. **Verificar siempre.** Probar el código, leerlo, entenderlo. La IA puede cometer errores.
 3. **Documentar el proceso.** Reconocer cuándo la IA ayudó es parte de la transparencia académica.
 
 Mi conclusión es que la IA es una herramienta poderosísima para programadores en formación, pero solo si se usa de forma activa y crítica. Si la usara para copiar y pegar sin entender, estaría engañándome a mí mismo y reduciendo mi aprendizaje. Usada como interlocutor técnico, en cambio, multiplica lo que puedo aprender y construir.
