@@ -9,7 +9,7 @@
 
 ## Proyecto en producción
 
-**https://teclab.uct.cl/~csepulveda2025/** *(reemplazar por tu URL real)*
+**https://teclab.uct.cl/~csepulveda/**
 
 > Actualizar este enlace una vez subido a teclab.
 
