@@ -184,7 +184,7 @@ Este proyecto fue desarrollado con apoyo de **Claude (Anthropic)** como asistent
 ## Diseño
 
 - Wireframe: `docs/wireframe.png`
-- Figma: ver `docs/figma-link.txt`
+- Figma: https://www.figma.com/site/yppzLaFgcnxsFt2MkdccMe/portafolio_uct_carlos_sepulveda?node-id=0-3&t=KsKyGLVPTBE8hevm-0
 
 ## Licencia
 
