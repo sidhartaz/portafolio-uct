@@ -103,7 +103,7 @@ portafolio-uct/
 ### 2. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/portafolio-uct.git
+git clone https://github.com/sidhartaz/portafolio-uct.git
 cd portafolio-uct
 ```
 
