@@ -11,7 +11,6 @@
 
 **https://teclab.uct.cl/~csepulveda/**
 
-> Actualizar este enlace una vez subido a teclab.
 
 ---
 
@@ -142,19 +141,7 @@ Luego abre `http://localhost:8000`
 **Opción B — XAMPP / Laragon / WAMP:**
 Copia la carpeta a `htdocs/` y abre `http://localhost/portafolio-uct/`
 
-## Acceso al panel administrativo
 
-| Campo | Valor por defecto |
-|---|---|
-| **URL** | `/pages/login.php` |
-| **Usuario** | `admin` |
-| **Contraseña** | `admin1234` |
-
-> **Cambiar la contraseña en producción.** Para hacerlo, ejecuta en PHP:
-> ```php
-> echo password_hash('TU_NUEVA_CLAVE', PASSWORD_DEFAULT);
-> ```
-> Luego actualiza el campo `password` de la tabla `usuarios`.
 
 ## Funcionalidades
 
