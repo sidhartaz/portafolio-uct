@@ -10,12 +10,7 @@
 ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
-// ===== CREDENCIALES =====
-// EN LOCAL (XAMPP/Laragon):
-//   DB_HOST = 'localhost', DB_USER = 'root', DB_PASS = ''
-// EN TECLAB:
-//   Reemplazar por las credenciales que te dio el profesor
-//   (normalmente tu_usuario_uct y la clave asignada).
+
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
